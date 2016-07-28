@@ -1,0 +1,56 @@
+{process_pagedata} {* Adds page specific metadata to the page *}
+<!doctype html>
+<html lang="en"> 
+ 
+<head>
+   <title>{title} | {sitename}</title> 
+   {metadata} 
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+	<link rel="stylesheet" href="css/layout.css">
+	<!-- <link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css"> -->
+	
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif|Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+   {cms_stylesheet} 
+</head>
+ 
+<body>
+<div class=container>
+
+<!—- Global Content Blocks—>
+
+{global_content name='header'}
+{global_content name='logofeatured'}
+
+<div class="clear"></div>
+<div class="divider"> </div>
+
+{global_content name='menu'}
+
+{global_content name='promoSlider'}
+
+
+
+{global_content name='PokerSection'} ++>{global_content name='PokerInfo'} 
+{global_content name='CasinoSection'} ++>{global_content name=‘CasinoInfo'} 
+{global_content name='BingoSection'} ++>{global_content name=‘BingoInfo'} 
+
+{global_content name='bannerSection'}
+
+   <footer>
+      {global_content name='footer'} 
+
+   </footer>
+</div>
+</body>
+
+ {global_content name='ScriptsLinks'}
+</html>
